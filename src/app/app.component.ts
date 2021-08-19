@@ -34,7 +34,7 @@ export class AppComponent implements OnInit{
         console.log('this.User', this.users);
 
         this.profileImage = this.users['results'][0]['picture']['large'];
-        this.socialIcons[0]['value'] = `${this.users['results'][0]['name']['first']} ${this.users['results'][0]['name']['first']}`;
+        this.socialIcons[0]['value'] = `${this.users['results'][0]['name']['first']} ${this.users['results'][0]['name']['last']}`;
         this.socialIcons[1]['value'] = this.users['results'][0]['email'];
         this.socialIcons[2]['value'] = this.users['results'][0]['dob']['date'];
         this.socialIcons[3]['value'] = `${this.users['results'][0]['location']['street']['number']} ${this.users['results'][0]['location']['street']['name']}`;
