@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+.body {
+    background: linear-gradient(to top, #f9f9f9 0 50%, #2c2e31 50% 100%);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mainCard {
+    padding: 0 !important;
+}
+.horizontalLine {
+    position: absolute;
+    top: 100px;
+    height: 1px;
+    background-color: lightgray;
+    width: 100%;
+}
+.profileImageContainer {
+    z-index: 1000;
+    border: #2c2e31 solid 1px;
+}
+.profileImage {
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+}
+.roundShape {
+    border-radius: 50%;
+}
+.marginTop1em {
+    margin-top: 1em;
+}
+.marginBottom2em {
+    margin-bottom: 2em;
+}
+.content {
+    margin-top: 1.5em;
+    color: grey;
+}
+.dobText {
+    font-size: 2em;
+    color: black;
+}
+.textAlignCenter {
+    text-align: center;
+}
+.colorGreen {
+    color: green;
+}

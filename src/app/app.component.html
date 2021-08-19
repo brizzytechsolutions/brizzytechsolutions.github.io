@@ -1,0 +1,33 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxFill>
+  <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="40">
+    <!-- Main Container -->
+    <mat-card class="mainCard">
+      <!-- Horizontal Line -->
+      <div class="horizontalLine"></div>
+      <!-- Card content -->
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="column" fxLayoutAlign="center center" fxFlex="60">
+          <!-- Image -->
+          <div fxLayout="row" fxLayoutAlign="center center" class="marginTop1em">
+            <div fxLayout="column" fxLayoutAlign="center center" class="profileImageContainer roundShape">
+              <img class="roundShape profileImage" [src]="profileImage" alt="Profile Image">
+            </div>
+          </div>
+          <!-- Content -->
+          <div class="textAlignCenter">
+            <p class="content">{{selectedIconObject.title}}</p>
+            <p class="dobText" *ngIf="selectedIconObject.id === 'birthday'">{{selectedIconObject.value | date}}</p>
+            <p class="dobText" *ngIf="selectedIconObject.id !== 'birthday'">{{selectedIconObject.value}}</p>
+          </div>
+          <!-- Social Icons -->
+          <div fxLayout="row" fxLayoutAlign="space-between center" fxFill class="marginBottom2em">
+            <div fxLayout="column" fxLayoutAlign="center center" fxFlex="16.5"
+            *ngFor="let icon of socialIcons">
+              <span class="material-icons" (mouseover)="onHover(icon)" [class.colorGreen]="selectedIconId === icon.id">{{icon.icon}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
